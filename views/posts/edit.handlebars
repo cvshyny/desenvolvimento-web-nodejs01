@@ -1,0 +1,8 @@
+<form action="/posts/add" method="post">
+    <input name="id" type="hidden" value="{{post.id}}">
+    <label>Titulo</label>
+    <input name="titulo" value="{{post.titulo}}"/>
+    <label>Texto</label> 
+    <textarea name="texto" cols="30" rows="10" value="{{post.texto}}"></textarea>
+    <input type="submit" value="Enviar"/>
+</form>
