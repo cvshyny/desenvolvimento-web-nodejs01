@@ -3,5 +3,10 @@
     <input name="titulo"/>
     <label>Texto</label> 
     <textarea name="texto" cols="30" rows="10"></textarea>
+     <select name="users_id">
+        {{#each users}}
+            <option value="{{this.id}}">{{this.nome}}</option>
+        {{/each}}
+    </select>
     <input type="submit" value="Enviar"/>
 </form>

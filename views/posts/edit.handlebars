@@ -4,5 +4,10 @@
     <input name="titulo" value="{{post.titulo}}"/>
     <label>Texto</label> 
     <textarea name="texto" cols="30" rows="10" value="{{post.texto}}"></textarea>
+     <select name="users_id">
+        {{#each users}}
+            <option value="{{this.id}}" {{#if isSelected}}selected{{/if}}>{{this.nome}}</option>
+        {{/each}}
+    </select>
     <input type="submit" value="Enviar"/>
 </form>

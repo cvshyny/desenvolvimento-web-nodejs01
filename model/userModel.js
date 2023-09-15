@@ -20,12 +20,17 @@ function excluir(user_id) {
   return db.query('DELETE FROM users WHERE id = ?', [user_id])
 }
 
+function getUserLogin(email, senha) {
+  return db.query('SELECT * FROM users WHERE email = ? AND senha = ? ', [email, senha]);
+}
+
 module.exports = {
   getAll,
   getUser,
   save,
   alterar,
-  excluir
+  excluir,
+  getUserLogin
 };
 
 

@@ -2,7 +2,11 @@
 <input value="{{post.id}}" readonly> 
 <label>Titulo</label>
 <input value="{{post.titulo}}" readonly>
-<label>Texto</label>
-<input value="{{post.texto}}" readonly>
+<textarea name="texto" id="" cols="30" rows="10" readonly>{{post.texto}}</textarea>
+<label>Usuário</label>
+<input value="{{post.nome}}"  readonly/>
+<label>Id usuário</label>
+<input value="{{post.users_id}}"  readonly/>
+
 
 <button><a href="/posts/index">Voltar</a></button>
