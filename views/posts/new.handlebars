@@ -1,12 +1,25 @@
 <form action="/posts/add" method="post">
-    <label>Titulo</label>
-    <input name="titulo"/>
-    <label>Texto</label> 
-    <textarea name="texto" cols="30" rows="10"></textarea>
-     <select name="users_id">
+     
+    <div class="form-floating mb-3">
+        <input name="titulo" type="text" class="form-control" id="floatingInput" maxlength="20">
+        <label for="floatingInput">Digite seu titulo</label>
+    </div>
+
+    <div class="form-floating mb-3">
+        <textarea name="texto" class="form-control" id="floatingTextarea2" style="height: 100px" maxlength="120"></textarea>
+        <label for="floatingTextarea2">Digite seu texto</label>
+    </div>
+
+    <div class="form-floating mb-3">
+  <select name="users_id" class="form-select" id="floatingSelect">
+    <option >
         {{#each users}}
             <option value="{{this.id}}">{{this.nome}}</option>
         {{/each}}
-    </select>
-    <input type="submit" value="Enviar"/>
+    </option>
+  </select>
+  <label for="floatingSelect">Selecione o usuario</label>
+    </div>
+    
+    <input type="submit" class="btn btn-secondary" value="Enviar"/>
 </form>
