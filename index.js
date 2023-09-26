@@ -1,6 +1,5 @@
 const express = require('express')
 const exphbs = require('express-handlebars')
-const conn = require('./db/database')
 const session = require('express-session')
 
 const userRoutes = require('./routes/usersRoutes')

@@ -43,13 +43,13 @@ async function salvar(req, res) {
   const newUser = {
     nome, 
     email,
-    senha
+    senha                       
   }
   try {
     await userModel.save(newUser);
     res.redirect('/users/index')
   } catch (error) {
-    res.status(500).json({ error: 'Internal server error' });
+    res.status(500).json({ error: 'Internal server error users' });
   }
 }
 
