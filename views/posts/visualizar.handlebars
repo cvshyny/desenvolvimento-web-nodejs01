@@ -1,12 +1,28 @@
-<label>ID</label>
-<input value="{{post.id}}" readonly> 
-<label>Titulo</label>
-<input value="{{post.titulo}}" readonly>
-<textarea name="texto" id="" cols="30" rows="10" readonly>{{post.texto}}</textarea>
-<label>Usuário</label>
-<input value="{{post.nome}}"  readonly/>
-<label>Id usuário</label>
-<input value="{{post.users_id}}"  readonly/>
+<div class="mb-3 py-3 col-8 mx-auto loginA">
+<div class="form-floating mb-3">
+    <input name="titulo" type="text" class="form-control" id="floatingInput" maxlength="20" value="{{post.id}}" readonly >
+    <label for="floatingInput">ID post</label>
+</div>
 
+<div class="form-floating mb-3">
+    <input name="titulo" type="text" class="form-control" id="floatingInput" maxlength="20" value="{{post.titulo}}" readonly >
+    <label for="floatingInput">Titulo</label>
+</div>
 
-<button><a href="/posts/index">Voltar</a></button>
+<div class="form-floating mb-3">
+        <textarea readonly name="texto" class="form-control" id="floatingTextarea2" style="height: 100px" maxlength="120">{{post.texto}}</textarea readonly>
+        <label for="floatingTextarea2">Texto</label >
+    </div>
+
+<div class="form-floating mb-3">
+    <input name="titulo" type="text" class="form-control" id="floatingInput" maxlength="20" value="{{post.users_id}}" >
+    <label for="floatingInput">ID usuário</label>
+</div>
+
+<div class="form-floating mb-3">
+    <input name="titulo" type="text" class="form-control" id="floatingInput" maxlength="20" value="{{post.nome}}" readonly>
+    <label for="floatingInput">Usuário</label>
+</div>
+
+<button type="button" class="btn btn-secondary"><a class="bp" href="/posts/index">Voltar</a></button>
+</div>

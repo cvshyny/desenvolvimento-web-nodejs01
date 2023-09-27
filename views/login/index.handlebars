@@ -4,18 +4,23 @@
   <title>Login</title>
 </head>
 <body>
-  <h1>Login</h1>
-  <form action="/login/sign_in" method="POST">
-  <div class="mb-3 ">
-    <label name="email" value="{{email}}" required class="form-label" >Email</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" required>
-    <div id="emailHelp" class="form-text">Nunca compartilhe sua senha!</div>
+    <div class="mx-auto mt-3 loginA">
+      <h1>Login</h1>
+      <form action="/login/sign_in" method="POST">
+
+        <div class="mb-3 col-12">
+          <label name="email" value="{{email}}" required class="form-label" >Email</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" required>
+          <div id="emailHelp" class="form-text">Nunca compartilhe sua senha!</div>
+        </div>
+
+        <div class="mb-3 col-12">
+          <label name="senha" value="{{senha}}" class="form-label" >Senha</label>
+          <input type="password" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-primary tl mx-auto">Entrar</button>
+        
+    </form>
   </div>
-  <div class="mb-3">
-    <label name="senha" value="{{senha}}" class="form-label" >Senha</label>
-    <input type="password" class="form-control" required>
-  </div>
-  <button type="submit" class="btn btn-primary tl">Submit</button>
-</form>
 </body>
 </html>
