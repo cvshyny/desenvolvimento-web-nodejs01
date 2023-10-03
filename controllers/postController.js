@@ -12,6 +12,7 @@ async function lista(req, res) {
     try {
       const dados = await postModel.getAll();
       posts = dados[0]
+      console.log(posts)
       res.render('posts/lista', { posts })
     } catch (error) {
       console.log(error)
@@ -35,6 +36,7 @@ async function lista(req, res) {
       users_id
     }
     try {
+      console.log(newPost)
       await postModel.save(newPost);
       res.redirect('/posts/index')
     } catch (error) {
@@ -47,14 +49,13 @@ async function lista(req, res) {
     const postId = parseInt(req.params.id);
     try {
       const dados = await postModel.getPost(postId);
-      const dados_users = await userModel.getAll();
+      const users_dados = await userModel.getAll();
       if (dados[0].length > 0) {
         post = dados[0][0]
-        users = dados_users[0]
-        users.forEach(user => {
-          user.isSelected = user.id === post.users_id;
-        });
-        res.render('posts/edit', { post })
+        users = users_dados[0]
+       console.log(users)
+       console.log(post)
+        res.render('posts/edit', { post, users })
       } else {
         res.status(404).json({ error: 'Post Não encontrado' });
       }
@@ -92,7 +93,7 @@ async function lista(req, res) {
 
 
   async function alterar(req, res) {
-    const { titulo, texto, users_id } = req.body;
+    const { titulo, texto, users_id, id } = req.body;
     if (!titulo) {
       res.status(400).json({ error: 'titulo querido' });
       return;
@@ -102,11 +103,13 @@ async function lista(req, res) {
       return;
     }
     const updatepost = {
+      id,
       titulo,
       texto,
       users_id
     }
-    try {
+    try {     
+      console.log(updatepost)
       await postModel.alterar(updatepost);
       res.redirect('/posts/index')
     } catch (error) {

@@ -13,11 +13,11 @@
 
     <div class="form-floating mb-3">
   <select name="users_id" class="form-select" id="floatingSelect">
-    <option >
+   
         {{#each users}}
             <option value="{{this.id}}" {{#if isSelected}}selected{{/if}}>{{this.nome}}</option>
         {{/each}}
-    </option>
+
   </select>
   <label for="floatingSelect">Selecione o usuario</label>
     </div>

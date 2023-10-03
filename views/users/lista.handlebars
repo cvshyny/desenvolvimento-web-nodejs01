@@ -10,10 +10,9 @@
             <th>{{this.id}}</td>
             <td>{{this.nome}}</td>
             <td>{{this.email}}</td>
-            <td><a href="/users/delete/{{this.id}}">Excluir</a></td>
-            <td><a href="/users/edit/{{this.id}}">Editar</a></td>
-            <td><a href="/users/view/{{this.id}}">Visualizar</a></td>
-
+            <td><button type="button" class="btn btn-secondary"><a class="bp" href="/users/delete/{{this.id}}">Excluir</a></td></button>
+            <td><button type="button" class="btn btn-secondary"><a class="bp" href="/users/edit/{{this.id}}">Editar</a></button></td>
+            <td><button type="button" class="btn btn-secondary"><a class="bp" href="/users/view/{{this.id}}">Visualizar</a></td></button>
         </tr>
     {{/each}}
 </table>

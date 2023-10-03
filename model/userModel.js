@@ -9,7 +9,7 @@ function getUser(id) {
 }
 
 function save(user) {
-  return db.query('INSERT INTO users (nome, email) VALUES (?, ?)', [user.nome, user.email]);
+  return db.query('INSERT INTO users (nome, email, senha) VALUES (?, ?, ?)', [user.nome, user.email, user.senha]);
 }
 
 function alterar(user) {

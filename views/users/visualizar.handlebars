@@ -1,8 +1,17 @@
-<label>ID</label>
-<input value="{{user.id}}" readonly/>
-<label>Nome</label>
-<input value="{{user.nome}}"  readonly/>
-<label>Email</label>
-<input value="{{user.email}}" readonly>
+<div class="mx-auto mt-3 loginA">
+    <h1>Visualizar</h1>
+    <div class="mb-3 col-12">
+          <label>Id</label>
+          <input value="{{user.id}}" class="form-control" readonly>
+    </div>
+    <div class="mb-3 col-12">
+          <label>Nome</label>
+          <input value="{{user.nome}}" class="form-control" readonly>
+    </div>
+    <div class="mb-3 col-12">
+          <label>Email</label>
+          <input value="{{user.email}}" class="form-control" readonly>
+    </div>
 
-<button><a href="/users/index">Voltar</a></button>
+    <button  class="btn btn-secondary"><a class="bp" href="/users/index">Voltar</a></button>
+</div>
